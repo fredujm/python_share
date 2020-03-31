@@ -11,7 +11,12 @@ You can install these tools with pip :
 	pip install fbonnardot
 
 If you change or adapt a function, change its name (for example add your initial after the name)
-	
+
+These tools were made for :
+* personal work (http://frederic.bonnardot.free.fr),
+* my research work at LASPI (https://laspi.univ-st-etienne.fr),
+* and for teaching at IUT de ROANNE (https://iut-roanne.univ-st-etienne.fr).
+
 This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 http://creativecommons.org/licenses/by-nc-sa/4.0/
 

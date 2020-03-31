@@ -43,8 +43,8 @@ various
 
 Note
 ----
-Version 2020.01 23-Jan-2020
-Copyright (c) 2001-2019 Frédéric BONNARDOT.
+Version 2020.03 31-Mar-2020
+Copyright (c) 2001-2020 Frédéric BONNARDOT.
 This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 http://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -61,7 +61,7 @@ __author__ = "Frédéric BONNARDOT"
 __copyright__ = "Copyright 2020, Frédéric BONNARDOT"
 __credits__ = "Frédéric BONNARDOT"
 __license__ = "CC BY-NC-SA 4.0"
-__version__ = "2020.01"
+__version__ = "2020.03"
 __maintainer__ = __author__
 __email__ = "frederic.bonnardot@univ-st-etienne.fr"
 __status__ = "Prototype"
