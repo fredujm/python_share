@@ -20,7 +20,8 @@ import numpy as np                       # matrix management
 import scipy.interpolate as interp       # interpolation
 import warnings
 import matplotlib.pyplot as plt          # Plot
-from .supPlot import supPlot
+#from .supPlot import supPlot
+import fbonnardot.display.supPlot
 
 plt.rcParams['toolbar'] = 'toolmanager'  # Pour ajouter une toolbar
 
@@ -116,8 +117,8 @@ def periodPlot(data,period,selection=0,moments=0,orient='vert',overlap=0,Ts=1,sc
     #                         Monday 9 December 2019 (Add axes parameter)
     #                         Monday 30 December 2019 (Add line_opts parameter) 
     #                         Thursday 6 February 2020 (orient='no' option)
-    #                         Tuesday 31 March 2020 (NumPy docstring)
-    # Version               : 1.81 i
+    #                         Tuesday 31 March 2020 (NumPy docstring - autotest)
+    # Version               : 1.82 i
 
     # Check parameters
     if np.isscalar(selection):
@@ -301,7 +302,7 @@ def periodPlot(data,period,selection=0,moments=0,orient='vert',overlap=0,Ts=1,sc
     # Call supplot for display
     [li,col]=disp_blks.shape[-2:]
 
-    supPlot (disp_blks,col,0,Ts,names,orient,overlap,scale,axes,fmt=fmt)
+    fbonnardot.display.supPlot (disp_blks,col,0,Ts,names,orient,overlap,scale,axes,fmt=fmt)
     if orient!="no":
         if axes==None:
             plt.text (0,1,str(li)+' blocks   ', ha='right',va='bottom')
@@ -322,4 +323,11 @@ def cumulant3 (m1,m2,m3):
 def cumulant2 (m1,m2):
     return m2-m1*m1
 
-# Auto-test not possible due to .supPlot import
+# Auto-test if Python script launched from console ---------------------------
+if __name__ == '__main__':
+    print("Auto-test if Python script launched from console")
+    print("You should see a graph with a stack of noise + sine wave, synchronous average and variance.")
+    N=1000; t=np.arange(N); period=30.223
+    signal=np.sin(2*np.pi*t/period)+0.1*np.random.randn(N)
+    periodPlot(signal,period,2,2)
+    

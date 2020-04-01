@@ -38,9 +38,10 @@ setup(
     author_email=fbonnardot.__email__,
  
     # Short description
-    description="Signal processing tools develop, translate or adapt in Python.",
+    description="Signal processing tools for Python.",
  
     long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
  
     # Packages needed
     install_requires= ["numpy","scipy","matplotlib","PyQt5"],
