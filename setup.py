@@ -3,17 +3,20 @@
 """
 Created on Tue Mar 31 17:35:02 2020
 
-@author: Frédéric BONNARDOT, CC BY-NC-SA 4.0 license
+@author: Frédéric BONNARDOT, AGPL-3.0-or-later license
 
-This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-http://creativecommons.org/licenses/by-nc-sa/4.0/
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-This code is given as is without warranty of any kind.
-In no event shall the authors or copyright holder be liable for any claim
-                                                   damages or other liability.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
 
-If you change or adapt this function, change its name (for example add your
-                                                       initial after the name)
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 This file was created by using the tutorial at
 http://sametmax.com/creer-un-setup-py-et-mettre-sa-bibliotheque-python-en-ligne-sur-pypi/
@@ -58,7 +61,7 @@ setup(
         "Programming Language :: Python",
         "Development Status :: 1 - Planning",
         "Intended Audience :: Science/Research",
-        "License :: Other/Proprietary License",
+        "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
         "Natural Language :: English",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3 :: Only",
@@ -68,7 +71,7 @@ setup(
  
     # A fournir uniquement si votre licence n'est pas listée dans "classifiers"
     # ce qui est notre cas
-    license="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License",
+    license="GNU Affero General Public License v3 or later (AGPLv3+)",
 
  
 )

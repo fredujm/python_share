@@ -1,28 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-=====
-Speed
-=====
+=================
+Cyclostationarity
+=================
 
 Contents
 --------
-Functions to estimate instantaneous speed and/or phasis.
+Cyclostationary analysis of signal:
 
 Details
 -------
 
-demodAnalytic
-    Retreive the phase and the frequency by using the analytic signal phase
-    around a given frequency band.
-synchronisation2
-    Synchronisation of data by using intercorrelation or an amplitude based detection.
-
+cyclicTimeCorr
+    Compute temporal (inter)-correlation of a cyclostationnary signal.
+syncAv
+    Computes the synchronous average
 Note
 ----
-
-Version 2020.04 01-Apr-2020
-Copyright (c) 2001-2020 Frédéric BONNARDOT.
+Version 2019.11 09-Dec-2019
+Copyright (c) 2001-2019 Frédéric BONNARDOT.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
@@ -46,18 +43,18 @@ In no event shall the authors or copyright holder be liable for any claim damage
 """
 
 __author__ = "Frédéric BONNARDOT"
-__copyright__ = "Copyright 2020, Frédéric BONNARDOT"
+__copyright__ = "Copyright 2019, Frédéric BONNARDOT"
 __credits__ = "Frédéric BONNARDOT"
 __license__ = "AGPL-3.0-or-later license"
-__version__ = "2020.04"
+__version__ = "2019.12"
 __maintainer__ = __author__
 __email__ = "frederic.bonnardot@univ-st-etienne.fr"
 __status__ = "Prototype"
 
-__all__ = [
-        'synchronisation2',
-        'demodAnalytic'
+__all__=[
+        'cyclicTimeCorr',
+        'syncAv'
 ]
 
-from .demodAnalytic    import demodAnalytic
-from .synchronisation2 import synchronisation2
+from .cyclicTimeCorr import cyclicTimeCorr
+from .syncAv         import syncAv
