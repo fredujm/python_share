@@ -31,7 +31,7 @@ import matplotlib.pyplot as plt          # plots
 from mpl_toolkits.mplot3d import axes3d  # 3D projection
 import fbonnardot.cyclostationarity.syncAv
 
-def cyclicTimeCorr (x,y,period,vect_tau,graph=0):
+def cycloTimeCorr (x,y,period,vect_tau,graph=0):
     """
     Compute temporal (inter)-correlation of a cyclostationnary signal.
 
@@ -53,7 +53,7 @@ def cyclicTimeCorr (x,y,period,vect_tau,graph=0):
     Returns
     -------
     Rxy : matrix of size period x len(vect_tau)
-        Estimated cyclic correlation Rxy(t,tau)
+        Estimated correlation Rxy(t,tau)
                       
     Note
     -----
@@ -72,12 +72,13 @@ def cyclicTimeCorr (x,y,period,vect_tau,graph=0):
     >>> bruit=signal.lfilter([1,0.9,0.8,0.7,0.4,0.5,0.2,0.1],1,bruit) # Correlate noise
     >>> data=np.sin(2*np.pi/per*np.arange(N))*bruit
     >>> tau=np.arange(0,20,2)
-    >>> Rxx=fb.cyclicTimeCorr(data,data,per,tau,graph=1)
+    >>> Rxx=fb.cycloTimeCorr(data,data,per,tau,graph=1)
     """
     
     # Creation              : Tuesday 4 July 2017      (MATLAB version)
     # Modifications         : Tuesday 19 November 2019 (Translation to Python 3.7)
     #                         Thursday 2 April 2020    (Docstring anf Auto test)
+    #                         Thurday 9 April 2020 (change name form cyclicTimeCorr to cycloTimeCorr)
     # Version               : 1.1 i
 
     Nx=len(x)
@@ -128,7 +129,7 @@ def progressBar(position):
     
     if position>=0 and position<=1:
         nb_done=int(np.ceil(position*50))
-        print("\rcyclicTimeCorr : \u001b[44;1m"+">"*nb_done+"\u001b[0m\u001b[44m"+"-"*(50-nb_done)+"\u001b[0m",end='')
+        print("\rcycloTimeCorr : \u001b[44;1m"+">"*nb_done+"\u001b[0m\u001b[44m"+"-"*(50-nb_done)+"\u001b[0m",end='')
     else:
         print("\r"+" "*70+"\r\u001b[A")
         
@@ -145,4 +146,4 @@ if __name__ == '__main__':
     bruit=signal.lfilter([1,0.9,0.8,0.7,0.4,0.5,0.2,0.1],1,bruit) # Correlate noise
     data=np.sin(2*np.pi/per*np.arange(N))*bruit
     tau=np.arange(0,20,2)
-    Rxx=cyclicTimeCorr(data,data,per,tau,graph=1)
+    Rxx=cycloTimeCorr(data,data,per,tau,graph=1)

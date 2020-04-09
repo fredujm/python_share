@@ -12,7 +12,7 @@ Cyclostationary analysis of signal:
 Details
 -------
 
-cyclicTimeCorr
+cycloTimeCorr
     Compute temporal (inter)-correlation of a cyclostationnary signal.
 syncAv
     Computes the synchronous average
@@ -52,9 +52,9 @@ __email__ = "frederic.bonnardot@univ-st-etienne.fr"
 __status__ = "Prototype"
 
 __all__=[
-        'cyclicTimeCorr',
+        'cycloTimeCorr',
         'syncAv'
 ]
 
-from .cyclicTimeCorr import cyclicTimeCorr
+from .cycloTimeCorr  import cycloTimeCorr
 from .syncAv         import syncAv
