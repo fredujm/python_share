@@ -72,7 +72,7 @@ __author__ = "Frédéric BONNARDOT"
 __copyright__ = "Copyright 2020, Frédéric BONNARDOT"
 __credits__ = "Frédéric BONNARDOT"
 __license__ = "AGPL-3.0-or-later license"
-__version__ = "2020.04c"
+__version__ = "2020.04d"
 __maintainer__ = __author__
 __email__ = "frederic.bonnardot@univ-st-etienne.fr"
 __status__ = "Prototype"
@@ -90,4 +90,4 @@ from .display import *
 from .signalproc import *
 #from .simulation import *
 from .speed import *
-#from .various import *
+from .various import *
